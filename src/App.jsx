@@ -2,11 +2,12 @@ import './styles/App.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { displayActions, operatorsX } from './displaySlice.js';
 
+const limiter = 'DIGIT LIMIT MET';
+
 const App = () => {
   const dispatch = useDispatch();
   const expression = useSelector((state) => state.expression);
   const display = useSelector((state) => state.display);
-  const limiter = 'DIGIT LIMIT MET';
 
   const handleClick = (event) => {
     if (display !== limiter) {
